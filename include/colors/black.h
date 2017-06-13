@@ -3,6 +3,6 @@
 class Black
 {
 public:
-	const char* ToString();
-	int ToRGB();
+	const char* ToString() const;
+	int ToRGB() const;
 };

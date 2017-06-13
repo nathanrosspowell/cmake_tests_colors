@@ -1,11 +1,11 @@
 #include "colors/white.h"
 
-const char* White::ToString()
+const char* White::ToString() const
 {
 	return "White";
 }
 
-int White::ToRGB()
+int White::ToRGB() const
 {
 	return 0xFFF;
 }
