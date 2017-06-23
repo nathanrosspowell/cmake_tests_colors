@@ -10,3 +10,19 @@ CTestTestfile.cmake
 
 # The build folder
 /build/
+
+# vim swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# vim session
+Session.vim
+
+# vim temporary
+.netrwhist
+*~
+# vim auto-generated tag files
+tags
+
