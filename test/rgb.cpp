@@ -11,6 +11,7 @@ int main()
 {
     using namespace colors;
 
+    // List of RGB values and their hex code counterparts.
     std::pair<const char* const, Rgb> colorPairs[] = {
         std::make_pair("ffffff", Rgb{255, 255, 255}),
         std::make_pair("000000", Rgb{0, 0, 0}),
@@ -22,8 +23,10 @@ int main()
     {
         const auto& target = colorPair.first;
         const auto& color = colorPair.second;
-        const auto hex = RgbToHex(color);
-        if (hex != std::string(target))
+        const auto hex = MakeHex(color);
+
+        // Test to see if the MakeHex function gave us the correct value.
+        if (hex != target)
         {
             std::cout << "Expecting '" << target << "', got '" << hex << "'" << std::endl;
             return 1;

@@ -4,7 +4,7 @@
 
 namespace colors
 {
-    auto RgbToHex(const Rgb& rgb) -> std::string
+    auto MakeHex(const Rgb& rgb) -> std::string
     {
         const auto filler = '0';
         const auto width = 2;

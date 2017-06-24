@@ -12,5 +12,5 @@ namespace colors
         const std::uint8_t b{0};
     };
 
-    auto RgbToHex(const Rgb& rgb) -> std::string;
+    auto MakeHex(const Rgb& rgb) -> std::string;
 }
