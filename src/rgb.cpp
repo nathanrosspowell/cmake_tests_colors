@@ -1,11 +1,9 @@
 #include "colors/rgb.h" 
 
 #include <iomanip>
+#include <sstream>
 
 namespace colors
-{
-
-namespace
 {
 
 static RgbHex ToInt(const decltype(Rgb::r) value)
@@ -13,7 +11,7 @@ static RgbHex ToInt(const decltype(Rgb::r) value)
     return static_cast<RgbHex>(value);
 }
 
-static void FormatTwoCharHex(const std::uint8_t& value, std::stringstream& outStream)
+static void FormatTwoCharHex(const decltype(Rgb::r) value, std::stringstream& outStream)
 {
     const auto filler = '0';
     const auto width = 2;
@@ -22,8 +20,6 @@ static void FormatTwoCharHex(const std::uint8_t& value, std::stringstream& outSt
               << std::setw(width)
               << ToInt(value);
 }
-
-} // namespace
 
 auto Rgb::operator == (const Rgb& rhs) const -> bool
 {
@@ -38,6 +34,7 @@ auto Rgb::operator != (const Rgb& rhs) const -> bool
 auto operator <<(std::ostream& os, const Rgb& rgb) -> std::ostream&
 {
     os << "{" << ToInt(rgb.r) << "," << ToInt(rgb.g) << "," << ToInt(rgb.b) << "}";
+    return os;
 }
 
 auto operator "" _Rgb(const unsigned long long int hexValue) -> Rgb
