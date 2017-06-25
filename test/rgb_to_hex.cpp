@@ -2,9 +2,6 @@
 #include <ios>
 #include <string>
 
-#include "colors/black.h"
-#include "colors/white.h"
-#include "colors/ginger.h"
 #include "colors/rgb.h"
 
 int main()
